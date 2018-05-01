@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="EducationalGame-master.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ScoreManager.cs">
+    <Files>
+      <File FileName="Assets\Scripts\TimeManager.cs" Line="12" Column="26" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="3" Column="1" />
+      <File FileName="Assets\Scripts\ScoreManager.cs" Line="15" Column="30" />
+      <File FileName="Assets\Scripts\EnemyHealth.cs" Line="17" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
