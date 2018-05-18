@@ -1,35 +1,16 @@
 {
-        "maths": {
-            "q1": {
-                "question": "Choose the Order Number ?",
-                "options": [
-                    "10",
-                    "11",
-                    "12",
-                    "14"
-                ],
-                "answer": "11"
-            },
-            "q2": {
-                "question": "Choose the Order Number ?",
-                "options": [
-                    "27",
-                    "28",
-                    "26",
-                    "30"
-                ],
-                "answer": "27"
-            },
-            "q3": {
-                "question": "Choose the Order Number ?",
-                "options": [
-                    "642",
-                    "325",
-                    "428",
-                    "572"
-                ],
-                "answer": "325"
-            }
+    "maths": {
+        "q1": {
+            "question": "Choose the Order Number ?",
+            "answer": "11"
+        },
+        "q2": {
+            "question": "Choose the Order Number ?",
+            "answer": "27"
+        },
+        "q3": {
+            "question": "Choose the Order Number ?",
+            "answer": "325"            
         }
     }
 }
