@@ -3,8 +3,8 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour {
 
-	public GameObject playerPrefab;
-
+    public GameObject playerPrefab;
+    public static QuestionHandler qh;
 	private bool gameStarted;
 	private TimeManager timeManager;
 	private GameObject player;
@@ -14,27 +14,27 @@ public class GameManager : MonoBehaviour {
 	void Awake(){
 		floor = GameObject.Find ("Foreground");
 		spawner = GameObject.Find ("Spawner").GetComponent<Spawner> ();
-		timeManager = GetComponent<TimeManager> ();
+        timeManager = GetComponent<TimeManager>();
 	}
 
 	// Use this for initialization
 	void Start () {
-
 		var floorHeight = floor.transform.localScale.y;
-
 		var pos = floor.transform.position;
 		pos.x = 0;
 		pos.y = -((Screen.height / PixelPerfectCamera.pixelsToUnits) / 2) + (floorHeight / 2);
 		floor.transform.position = pos;
-
 		spawner.active = false;
-
 		Time.timeScale = 0;
+        Debug.Log("test");
+        qh = new QuestionHandler();
+        qh.load("addition");
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (!gameStarted && Time.timeScale == 0) {
+        Debug.Log("test");
+        if (!gameStarted && Time.timeScale == 0) {
 
 			if(Input.anyKeyDown){
 
