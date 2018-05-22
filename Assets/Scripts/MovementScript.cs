@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,6 +25,7 @@ public class MovementScript : MonoBehaviour {
         {
             GameObject bullet = (GameObject)Instantiate(bulletOb);
             bullet.transform.position = playerpos;
+            
         }
 
         float x = Input.GetAxisRaw("Horizontal");

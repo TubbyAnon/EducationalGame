@@ -288,6 +288,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ScoreManagerScript.cs" />
     <Compile Include="Assets\Scripts\bulletscript.cs" />
     <Compile Include="Assets\Scripts\DestroyOffscreen.cs" />
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />

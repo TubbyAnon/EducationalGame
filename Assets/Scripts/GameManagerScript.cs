@@ -7,11 +7,16 @@ public class GameManagerScript : MonoBehaviour {
 
     public Text ScoreTxt;
     public Text LivesTxt;
+
+    public GameObject PausePanel;
+    public GameObject GameOver;
+
     //public Canvas Pause;
     //public Canvas GameOver;
 
-    int score;
+    int score = 0;
     int lives;
+    bool isPaused  = false;
     
     // Use this for initialization
 	void Start () {
@@ -21,23 +26,56 @@ public class GameManagerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        if (Input.GetKeyDown(KeyCode.P) && isPaused.Equals(false))
+        {
+            PauseGame();
+
+        }
+        else if (Input.GetKeyDown(KeyCode.P) && isPaused.Equals(true))
+        {
+            ResumeGame();
+        }
+
+        if (LivesTxt.text.Equals("0"))
+        {
+            
+            gameOver();
+
+        }
+
         ScoreTxt.text = score.ToString();
-        LivesTxt.text = lives.ToString();
 
 	}
 
 
-
-    public void removeLive()
+    void PauseGame()
     {
-        lives--;
+        isPaused = true;
+        Time.timeScale = 0f;
+        PausePanel.SetActive(true);
+
     }
 
-    public void addScore() // for now only 100
+    void ResumeGame()
+    {
+        isPaused = false;
+        Time.timeScale = 1f;
+        PausePanel.SetActive(false);
+    }
+
+    void gameOver()
+    {
+        PauseGame();
+        isPaused = false;
+        GameOver.SetActive(true);
+    }
+
+    public void addScore()
     {
         score += 100;
 
     }
 
+   
 
 }

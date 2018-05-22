@@ -7,6 +7,8 @@ public class MeteorScript : MonoBehaviour {
     public float speed;
     public Text Score;
     int score;
+    GameManagerScript gm; 
+
 	// Use this for initialization
 	void Start () {
         speed = 2f;
@@ -27,14 +29,18 @@ public class MeteorScript : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+
+        Score.text = score.ToString();
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+        
         if (collision.tag == "BulletTag")
         {
 
-            //gm.addScore();
+            
             score += 100;
             Destroy(gameObject);
         }
