@@ -5,19 +5,25 @@ using UnityEngine;
 
 public class QuestionAnswer {
     private string question;
-    private int answer;
+    private string answer;
 
-   public string getQuestion()
+    public QuestionAnswer(string q, string a)
+    {
+        question = q;
+        answer = a;
+    }
+
+    public string getQuestion()
     {
         return question;
     }
 
-    public int getAnswer()
+    public string getAnswer()
     {
         return answer;
     }
 
-    public void setAnswer(int a)
+    public void setAnswer(string a)
     {
         answer = a;
     }
@@ -27,8 +33,5 @@ public class QuestionAnswer {
         question = q;
     }
 
-    internal List<QuestionAnswer> toList()
-    {
-        throw new NotImplementedException();
-    }
+
 }

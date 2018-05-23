@@ -8,21 +8,19 @@ using System.IO;
 
 public class QuestionHandler : MonoBehaviour
 {
-    private List<QuestionAnswer> qa;
+    private List<QuestionAnswer> qa = new List<QuestionAnswer>();
     private QuestionLoader ql;
     private QuestionAnswer current;
     private string path;
 
-
     public void Awake()
     {
         path = Application.dataPath + "/MathQ/";
-        Debug.Log(path);
     }
 
     public void loadQuestion()
     {
-        current = qa[0];    
+        current = qa[0];
         qa.RemoveAt(0);
     }
 
@@ -31,27 +29,26 @@ public class QuestionHandler : MonoBehaviour
         return current.getQuestion();
     }
 
-    public int getCurrentAnswer()
+    public string getCurrentAnswer()
     {
         return current.getAnswer();
     }
     public void load(string set)
     {
-        switch(set)
+        switch (set)
         {
             case "addition":
-                path = path + "Addition.json";
-                Debug.Log("Switch done");
+                path = Application.dataPath + "/MathQ/SampleQuestion.txt";
                 break;
         }
-        List<QuestionAnswer> list = new List<QuestionAnswer>();
-        string dataAsJson = File.ReadAllText(path);
-        Debug.Log(dataAsJson);
-     //   list = JsonUtility.FromJson<QuestionAnswer>(dataAsJson);
-        list.Shuffle();
-        qa = list;
+        string line;
+        System.IO.StreamReader file = new System.IO.StreamReader(path);
+        while ((line = file.ReadLine()) != null)
+        {
+            qa.Add(new QuestionAnswer(line.Split(',')[0], line.Split(',')[1]));
+        }
+
         loadQuestion();
-        Debug.Log(qa);
     }
 }
 

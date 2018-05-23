@@ -7,11 +7,11 @@ public class MeteorScript : MonoBehaviour {
     public float speed;
     public Text Score;
     int score;
-    int answer;
+    string answer = "";
 	// Use this for initialization
 	void Start () {
         speed = 2f;
-    //    answer = Random.Range(GameManager.qh.getCurrentAnswer() - 20, GameManager.qh.getCurrentAnswer() + 20);
+        answer = Random.Range(int.Parse(GameManagerScript.qh.getCurrentAnswer()) - 20, int.Parse(GameManagerScript.qh.getCurrentAnswer()) + 20).ToString();
 	}
 	
 	// Update is called once per frame
