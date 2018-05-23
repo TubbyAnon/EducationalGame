@@ -1,16 +1,16 @@
 {
-        "maths": {
-            "q1": {
-                "question": "5 + 7 = ?",
-                "answer": "12"
-            },
-            "q2": {
-                "question": "24 + 3 = ?",
-                "answer": "27"  
-            },
-            "q3": {
-                "question": "29 + 4 = ?",
-                "answer": "33"
+    "maths": {
+        "q1": {
+            "question": "5 + 7 = ?",
+            "answer": "12"
+        },
+        "q2": {
+            "question": "24 + 3 = ?",
+            "answer": "27"
+        },
+        "q3": {
+            "question": "29 + 4 = ?",
+            "answer": "33"
         }
     }
 }

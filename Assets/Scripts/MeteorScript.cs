@@ -34,10 +34,10 @@ public class MeteorScript : MonoBehaviour {
     {
         if (collision.tag == "BulletTag")
         {
-            if (answer == GameManager.qh.getCurrentAnswer())
+            if (answer == GameManagerScript.qh.getCurrentAnswer())
             {
                 score += 100;
-                GameManager.qh.loadQuestion();
+                GameManagerScript.qh.loadQuestion();
             }
             Destroy(collision.gameObject);
             Destroy(gameObject);

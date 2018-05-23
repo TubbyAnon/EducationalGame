@@ -7,6 +7,7 @@ public class GameManagerScript : MonoBehaviour {
 
     public Text ScoreTxt;
     public Text LivesTxt;
+    public static QuestionHandler qh;
     //public Canvas Pause;
     //public Canvas GameOver;
 
@@ -15,8 +16,9 @@ public class GameManagerScript : MonoBehaviour {
     
     // Use this for initialization
 	void Start () {
-		
-	}
+        qh = new QuestionHandler();
+        qh.load("addition");
+    }
 	
 	// Update is called once per frame
 	void Update () {

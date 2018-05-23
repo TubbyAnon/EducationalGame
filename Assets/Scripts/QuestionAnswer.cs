@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,5 +25,10 @@ public class QuestionAnswer {
    public void setQuestion(string q)
     {
         question = q;
+    }
+
+    internal List<QuestionAnswer> toList()
+    {
+        throw new NotImplementedException();
     }
 }

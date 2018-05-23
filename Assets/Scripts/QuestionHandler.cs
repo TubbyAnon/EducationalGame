@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading;
+using System.IO;
 
+[System.Serializable]
 
 public class QuestionHandler : MonoBehaviour
 {
@@ -15,6 +17,7 @@ public class QuestionHandler : MonoBehaviour
     public void Awake()
     {
         path = Application.dataPath + "/MathQ/";
+        Debug.Log(path);
     }
 
     public void loadQuestion()
@@ -38,14 +41,17 @@ public class QuestionHandler : MonoBehaviour
         {
             case "addition":
                 path = path + "Addition.json";
-                Debug.Log(path);
+                Debug.Log("Switch done");
                 break;
         }
         List<QuestionAnswer> list = new List<QuestionAnswer>();
-        list = JsonUtility.FromJson<List<QuestionAnswer>>(path);
+        string dataAsJson = File.ReadAllText(path);
+        Debug.Log(dataAsJson);
+     //   list = JsonUtility.FromJson<QuestionAnswer>(dataAsJson);
         list.Shuffle();
         qa = list;
         loadQuestion();
+        Debug.Log(qa);
     }
 }
 
