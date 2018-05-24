@@ -25,7 +25,7 @@ public class GameManagerScript : MonoBehaviour {
 	void Update () {
         ScoreTxt.text = score.ToString();
         LivesTxt.text = lives.ToString();
-        QuestionTxt.text = "0000000000";
+       //s QuestionTxt.text = "0000000000";
 
     }
     public void removeLive()

@@ -10,7 +10,7 @@ public class QuestionHandler : MonoBehaviour
 {
     private List<QuestionAnswer> qa = new List<QuestionAnswer>();
     private QuestionLoader ql;
-    private QuestionAnswer current;
+    public QuestionAnswer current;
     private string path;
 
     public void Awake()
@@ -21,6 +21,8 @@ public class QuestionHandler : MonoBehaviour
     public void loadQuestion()
     {
         current = qa[0];
+        Debug.Log(current.getQuestion());
+        Debug.Log(current.getAnswer());
         qa.RemoveAt(0);
     }
 

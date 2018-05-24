@@ -8,8 +8,7 @@ public class AnswerScript : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        QuestionHandler qh = new QuestionHandler();
-        answer = Random.Range(int.Parse(qh.getCurrentAnswer()) - 20,int.Parse( qh.getCurrentAnswer()) + 20);
+        answer = Random.Range(int.Parse(GameManagerScript.qh.getCurrentAnswer()) - 20,int.Parse(GameManagerScript.qh.getCurrentAnswer()) + 20);
 
         var parent = transform.parent;
         var parentRenderer = parent.GetComponent<Renderer>();
