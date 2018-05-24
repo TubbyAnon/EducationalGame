@@ -35,19 +35,19 @@ public class QuestionHandler : MonoBehaviour
     }
     public void load(string set)
     {
+        string line;
+        System.IO.StreamReader file;
         switch (set)
         {
             case "addition":
                 path = Application.dataPath + "/MathQ/SampleQuestion.txt";
                 break;
         }
-        string line;
-        System.IO.StreamReader file = new System.IO.StreamReader(path);
+        file = new System.IO.StreamReader(path);
         while ((line = file.ReadLine()) != null)
         {
             qa.Add(new QuestionAnswer(line.Split(',')[0], line.Split(',')[1]));
         }
-
         loadQuestion();
     }
 }

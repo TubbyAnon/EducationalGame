@@ -7,6 +7,7 @@ public class GameManagerScript : MonoBehaviour {
 
     public Text ScoreTxt;
     public Text LivesTxt;
+    public Text QuestionTxt;
     public static QuestionHandler qh;
     //public Canvas Pause;
     //public Canvas GameOver;
@@ -22,24 +23,17 @@ public class GameManagerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
         ScoreTxt.text = score.ToString();
         LivesTxt.text = lives.ToString();
+        QuestionTxt.text = "0000000000";
 
-	}
-
-
-
+    }
     public void removeLive()
     {
         lives--;
     }
-
     public void addScore() // for now only 100
     {
         score += 100;
-
     }
-
-
 }
