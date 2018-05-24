@@ -8,11 +8,15 @@ public class MeteorScript : MonoBehaviour {
     public Text Score;
     int score;
     int answer;
-	// Use this for initialization
-	void Start () {
+    
+
+    // Use this for initialization
+    void Start () {
         speed = 2f;
-    //    answer = Random.Range(GameManager.qh.getCurrentAnswer() - 20, GameManager.qh.getCurrentAnswer() + 20);
-	}
+        //    answer = Random.Range(GameManager.qh.getCurrentAnswer() - 20, GameManager.qh.getCurrentAnswer() + 20);
+        
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -23,7 +27,13 @@ public class MeteorScript : MonoBehaviour {
         transform.position = position;
 
         Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0,0));
+
         
+
+
+
+
+
         if (transform.position.y < min.y)
         {
             Destroy(gameObject);
@@ -43,4 +53,6 @@ public class MeteorScript : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+
+    
 }
