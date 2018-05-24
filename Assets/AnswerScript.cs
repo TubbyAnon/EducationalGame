@@ -3,18 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AnswerScript : MonoBehaviour {
-
     
     int answer;
     // Use this for initialization
     void Start () {
 
         QuestionHandler qh = new QuestionHandler();
-
-        answer = Random.Range(qh.getCurrentAnswer() - 20, qh.getCurrentAnswer() + 20);
+        answer = Random.Range(int.Parse(qh.getCurrentAnswer()) - 20,int.Parse( qh.getCurrentAnswer()) + 20);
 
         var parent = transform.parent;
-
         var parentRenderer = parent.GetComponent<Renderer>();
         var renderer = GetComponent<Renderer>();
         renderer.sortingLayerID = parentRenderer.sortingLayerID;
