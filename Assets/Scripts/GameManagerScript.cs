@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class GameManagerScript : MonoBehaviour {
 
@@ -21,7 +22,9 @@ public class GameManagerScript : MonoBehaviour {
 	void Start () {
         qh = new QuestionHandler();
         qh.load("easy");
-        hscore = int.Parse(new System.IO.StreamReader(Application.dataPath + "/Highscore.txt").ReadLine());
+        StreamReader rd = new StreamReader(Application.dataPath + "/Highscore.txt");
+        hscore = int.Parse(rd.ReadLine());
+        rd.Close();
         HighText.text = hscore.ToString();
     }
 

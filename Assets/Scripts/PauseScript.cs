@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+using System.IO;
 public class PauseScript : MonoBehaviour {
 
     public static bool IsPaused = false;
     public static bool GameOver = false; //to be used from outside. when true the game is over.
     public static bool FirstTime = true;
-
+    private static bool written = false;
     public GameObject PauseMenu;
     public GameObject SettingsMenu;
     public GameObject GameOverScreen;
@@ -72,8 +72,6 @@ public class PauseScript : MonoBehaviour {
     {
         SceneManager.LoadScene("MainMenuScene");
         Time.timeScale = 1f;
-        
-
     }
 
     public void QuitGame()
@@ -85,23 +83,25 @@ public class PauseScript : MonoBehaviour {
     {
         GameOverScreen.SetActive(true);
 
-        if(MeteorScript.score > GameManagerScript.hscore)
+        if(MeteorScript.score > GameManagerScript.hscore && written == false)
         {
-            new System.IO.StreamWriter(Application.dataPath + "/Highscore.txt").WriteLine(MeteorScript.score);
+            StreamWriter sw = new StreamWriter(Application.dataPath + "/Highscore.txt");
+            sw.WriteLine(MeteorScript.score);
+            sw.Close();
+            written = true;
         }
         Time.timeScale = 0f;
     }
 
     public void Restart()
     {
-        
         GameOverScreen.SetActive(false);
         Time.timeScale = 1f;
         GameOver = false;
         IntroMenu.SetActive(false);
         MeteorScript.score = 0;
         MovementScript.lives = 0;
-
+        written = false;
     }
 
     public void DisableIntro()
