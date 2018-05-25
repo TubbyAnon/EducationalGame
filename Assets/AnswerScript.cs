@@ -8,14 +8,14 @@ public class AnswerScript : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        int test = Random.Range(1, 5);
+        int test = Random.Range(1, 4);
         if (test == 2)
         {
             answer = GameManagerScript.qh.getCurrentAnswer();
         }
         else
         {
-            answer = Random.Range(int.Parse(GameManagerScript.qh.getCurrentAnswer()) - 20, int.Parse(GameManagerScript.qh.getCurrentAnswer()) + 20).ToString();
+            answer = Random.Range(int.Parse(GameManagerScript.qh.getCurrentAnswer())-(0 + int.Parse(GameManagerScript.qh.getCurrentAnswer())), int.Parse(GameManagerScript.qh.getCurrentAnswer()) + 50).ToString();
         }
 
         var parent = transform.parent;

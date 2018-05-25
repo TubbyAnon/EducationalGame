@@ -8,8 +8,9 @@ public class GameManagerScript : MonoBehaviour {
     public Text ScoreTxt;
     public Text LivesTxt;
     public Text QuestionTxt;
-    public Text HighScore;
+    public Text HighText;
     public static QuestionHandler qh;
+    public static int hscore;
     //public Canvas Pause;
     //public Canvas GameOver;
 
@@ -19,16 +20,16 @@ public class GameManagerScript : MonoBehaviour {
     // Use this for initialization
 	void Start () {
         qh = new QuestionHandler();
-        qh.load("addition");
-        HighScore.text = PlayerPrefs.GetInt("HighScore").ToString();
+        qh.load("easy");
+        hscore = int.Parse(new System.IO.StreamReader(Application.dataPath + "/Highscore.txt").ReadLine());
+        HighText.text = hscore.ToString();
     }
-	
+
 	// Update is called once per frame
 	void Update () {
         ScoreTxt.text = MeteorScript.score.ToString();
         LivesTxt.text = MovementScript.lives.ToString();
-        QuestionTxt.text = QuestionAnswer.question;
-
+        QuestionTxt.text = GameManagerScript.qh.getCurrentQuestion();
     }
    
 }

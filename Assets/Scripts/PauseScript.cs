@@ -84,6 +84,11 @@ public class PauseScript : MonoBehaviour {
     void EndGame()
     {
         GameOverScreen.SetActive(true);
+
+        if(MeteorScript.score > GameManagerScript.hscore)
+        {
+            new System.IO.StreamWriter(Application.dataPath + "/Highscore.txt").WriteLine(MeteorScript.score);
+        }
         Time.timeScale = 0f;
     }
 

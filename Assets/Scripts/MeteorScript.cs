@@ -5,16 +5,14 @@ using UnityEngine.UI;
 
 public class MeteorScript : MonoBehaviour
 {
-    public float speed;
+    public static float speed = 2f;
     public Text Score;
     public static int score;
     string answer = "";
     // Use this for initialization
     void Start()
     {
-        speed = 2f;
 
-       
     }
 
     // Update is called once per frame
@@ -41,15 +39,25 @@ public class MeteorScript : MonoBehaviour
             if (gameObject.GetComponentInChildren<TextMesh>().text.ToString().Equals(GameManagerScript.qh.getCurrentAnswer()))
             {
                 score += 100;
-                GameManagerScript.qh.loadQuestion();
+                
                 FindObjectOfType<AudioManagerScript>().Play("PointsEarned");
 
+                if (score > 500)
+                {
+                    GameManagerScript.qh.loadQuestionSet(2);
+                    speed = 4f;
+                }
+                else if (score > 200)
+                {
+                    GameManagerScript.qh.loadQuestionSet(2);
+                    speed = 3f;
+                }
+                GameManagerScript.qh.loadQuestion();
             }
             else
             {
                 MovementScript.lives--;
                 FindObjectOfType<AudioManagerScript>().Play("LifeLost");
-
             }
             Destroy(collision.gameObject);
             Destroy(gameObject);

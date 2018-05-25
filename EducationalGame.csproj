@@ -240,17 +240,8 @@
     <Reference Include="UnityEngine.Timeline">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UIAutomation">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.GoogleAudioSpatializer">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="TextMeshPro-2017.3-1.0.56-Editor">
       <HintPath>Assets/TextMeshPro/Plugins/Editor DLL/TextMeshPro-2017.3-1.0.56-Editor.dll</HintPath>
@@ -259,13 +250,13 @@
       <HintPath>Assets/TextMeshPro/Plugins/Editor DLL/TextMeshPro-2017.3-1.0.56-Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Users/Igor Brai/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+      <HintPath>C:/Users/Admin/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing">
-      <HintPath>C:/Users/Igor Brai/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.1/UnityEngine.Purchasing.dll</HintPath>
+      <HintPath>C:/Users/Admin/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.1/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
-      <HintPath>C:/Users/Igor Brai/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Admin/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\mscorlib.dll</HintPath>
@@ -296,13 +287,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UnityEditor.StandardEvents.csproj">
-      <Project>{6800202F-4402-D405-F8CB-03DC7BD78B92}</Project>
-      <Name>UnityEditor.StandardEvents</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.PackageManagerUI.Editor.csproj">
       <Project>{6877705C-FBD9-0C4F-5AFB-6FB431E5D39D}</Project>
       <Name>Unity.PackageManagerUI.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.StandardEvents.csproj">
+      <Project>{6800202F-4402-D405-F8CB-03DC7BD78B92}</Project>
+      <Name>UnityEditor.StandardEvents</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -381,6 +372,10 @@
     <None Include="Assets\Artwork\SpriteSheet\SpaceShooter\spaceShooter2_spritesheet_2X.xml" />
     <None Include="Assets\Artwork\SpriteSheet\UI\uipackSpace_sheet.xml" />
     <None Include="Assets\Artwork\UI\SpacePack\license.txt" />
+    <None Include="Assets\Highscore.txt" />
+    <None Include="Assets\MathQ\Easy.txt" />
+    <None Include="Assets\MathQ\Hard.txt" />
+    <None Include="Assets\MathQ\Med.txt" />
     <None Include="Assets\MathQ\SampleQuestion.txt" />
     <None Include="Assets\TextMeshPro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\TextMeshPro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
@@ -402,18 +397,18 @@
     <None Include="Assets\TextMeshPro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMeshPro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMeshPro\Resources\Shaders\TMPro_Surface.cginc" />
-    <None Include="C:\Users\Igor Brai\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Dark.uss" />
-    <None Include="C:\Users\Igor Brai\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Light.uss" />
-    <None Include="C:\Users\Igor Brai\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\Alert.uxml" />
-    <None Include="C:\Users\Igor Brai\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\PackageDetails.uxml" />
-    <None Include="C:\Users\Igor Brai\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\PackageGroup.uxml" />
-    <None Include="C:\Users\Igor Brai\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\PackageItem.uxml" />
-    <None Include="C:\Users\Igor Brai\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\PackageList.uxml" />
-    <None Include="C:\Users\Igor Brai\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\PackageManagerWindow.uxml" />
-    <None Include="C:\Users\Igor Brai\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\PackageSearchFilterTabs.uxml" />
-    <None Include="C:\Users\Igor Brai\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Unity.PackageManagerUI.Editor.asmdef" />
-    <None Include="C:\Users\Igor Brai\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Tests\Editor\Unity.PackageManagerUI.EditorTests.asmdef" />
-    <None Include="C:\Users\Igor Brai\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.standardevents@1.0.13\Editor\Editor.asmdef" />
+    <None Include="C:\Users\Admin\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Dark.uss" />
+    <None Include="C:\Users\Admin\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Light.uss" />
+    <None Include="C:\Users\Admin\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\Alert.uxml" />
+    <None Include="C:\Users\Admin\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\PackageDetails.uxml" />
+    <None Include="C:\Users\Admin\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\PackageGroup.uxml" />
+    <None Include="C:\Users\Admin\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\PackageItem.uxml" />
+    <None Include="C:\Users\Admin\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\PackageList.uxml" />
+    <None Include="C:\Users\Admin\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\PackageManagerWindow.uxml" />
+    <None Include="C:\Users\Admin\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\PackageSearchFilterTabs.uxml" />
+    <None Include="C:\Users\Admin\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Unity.PackageManagerUI.Editor.asmdef" />
+    <None Include="C:\Users\Admin\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Tests\Editor\Unity.PackageManagerUI.EditorTests.asmdef" />
+    <None Include="C:\Users\Admin\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.standardevents@1.0.13\Editor\Editor.asmdef" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
