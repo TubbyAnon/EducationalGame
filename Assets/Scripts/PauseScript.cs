@@ -100,8 +100,9 @@ public class PauseScript : MonoBehaviour {
         GameOver = false;
         IntroMenu.SetActive(false);
         MeteorScript.score = 0;
-        MovementScript.lives = 0;
+        MovementScript.lives = 3;
         written = false;
+        Menu();
     }
 
     public void DisableIntro()
