@@ -13,15 +13,8 @@ public class MeteorScript : MonoBehaviour
     void Start()
     {
         speed = 2f;
-        if (Random.Range(1, 5) == 4)
-        {
-            answer = GameManagerScript.qh.getCurrentAnswer();
-        }
-        else
-        {
-            answer = Random.Range(int.Parse(GameManagerScript.qh.getCurrentAnswer()) - 20, int.Parse(GameManagerScript.qh.getCurrentAnswer()) + 20).ToString();
 
-        }
+       
     }
 
     // Update is called once per frame
@@ -35,12 +28,6 @@ public class MeteorScript : MonoBehaviour
 
         Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
 
-
-
-
-
-
-
         if (transform.position.y < min.y)
         {
             Destroy(gameObject);
@@ -51,11 +38,10 @@ public class MeteorScript : MonoBehaviour
     {
         if (collision.tag == "BulletTag")
         {
-            if (answer == GameManagerScript.qh.getCurrentAnswer())
+            if (gameObject.GetComponentInChildren<TextMesh>().text.ToString().Equals(GameManagerScript.qh.getCurrentAnswer()))
             {
                 score += 100;
                 GameManagerScript.qh.loadQuestion();
-                Debug.Log("Correct");
             }
             else
             {
@@ -65,6 +51,4 @@ public class MeteorScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-
 }

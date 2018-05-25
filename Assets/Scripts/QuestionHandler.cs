@@ -21,8 +21,6 @@ public class QuestionHandler : MonoBehaviour
     public void loadQuestion()
     {
         current = qa[0];
-        Debug.Log(current.getQuestion());
-        Debug.Log(current.getAnswer());
         qa.RemoveAt(0);
     }
 
@@ -35,21 +33,29 @@ public class QuestionHandler : MonoBehaviour
     {
         return current.getAnswer();
     }
+
     public void load(string set)
     {
-        string line;
-        System.IO.StreamReader file;
-        switch (set)
-        {
-            case "addition":
-                path = Application.dataPath + "/MathQ/SampleQuestion.txt";
-                break;
-        }
-        file = new System.IO.StreamReader(path);
-        while ((line = file.ReadLine()) != null)
-        {
-            qa.Add(new QuestionAnswer(line.Split(',')[0], line.Split(',')[1]));
-        }
+        //string line;
+        //StreamReader file;
+        //switch (set)
+        //{
+        //    case "addition":
+        //        path = Application.dataPath + "/MathQ/SampleQuestion.txt";
+        //        break;
+        //}
+
+        //file = new System.IO.StreamReader(path);
+        //while ((line = file.ReadLine()) != null)
+        //{
+        //    string[] split = line.Split(',');
+        //    qa.Add(new QuestionAnswer(split[0], split[1]));
+        //}
+        qa.Add(new QuestionAnswer("2+2", "4"));
+        qa.Add(new QuestionAnswer("5+7", "12"));
+        qa.Add(new QuestionAnswer("4-2", "2"));
+        qa.Add(new QuestionAnswer("6+11", "17"));
+        qa.Add(new QuestionAnswer("2*2", "4"));
         loadQuestion();
     }
 }

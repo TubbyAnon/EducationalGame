@@ -4,22 +4,30 @@ using UnityEngine;
 
 public class AnswerScript : MonoBehaviour {
     
-    int answer;
+    string answer;
     // Use this for initialization
     void Start () {
 
-        answer = Random.Range(int.Parse(GameManagerScript.qh.getCurrentAnswer()) - 20,int.Parse(GameManagerScript.qh.getCurrentAnswer()) + 20);
+        int test = Random.Range(1, 5);
+        if (test == 2)
+        {
+            answer = GameManagerScript.qh.getCurrentAnswer();
+        }
+        else
+        {
+            answer = Random.Range(int.Parse(GameManagerScript.qh.getCurrentAnswer()) - 20, int.Parse(GameManagerScript.qh.getCurrentAnswer()) + 20).ToString();
+        }
 
         var parent = transform.parent;
         var parentRenderer = parent.GetComponent<Renderer>();
         var renderer = GetComponent<Renderer>();
         renderer.sortingLayerID = parentRenderer.sortingLayerID;
-        renderer.sortingOrder = parentRenderer.sortingOrder;
+        renderer.sortingOrder = 5;
 
         var spriteTransform = parent.transform;
         var text = GetComponent<TextMesh>();
         var pos = spriteTransform.position;
-        text.text = answer.ToString();
+        text.text = answer;
     }
 
     private void Update()

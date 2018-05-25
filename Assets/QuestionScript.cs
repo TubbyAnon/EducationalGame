@@ -21,12 +21,11 @@ public class QuestionScript : MonoBehaviour {
 
 
         txt = gameObject.GetComponent<Text>();
-        txt.text = GameManagerScript.qh.getCurrentQuestion();
-        Debug.Log(question + " QUestion");
+        
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        txt.text = GameManagerScript.qh.getCurrentQuestion();
+    }
 }

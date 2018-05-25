@@ -32,6 +32,4 @@ public class QuestionAnswer {
     {
         question = q;
     }
-
-
 }
