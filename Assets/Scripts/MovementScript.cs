@@ -9,7 +9,7 @@ public class MovementScript : MonoBehaviour {
     public float speed;
     public Vector2 playerpos;
     public Text Lives ;
-    int lives = 3;
+    public static int lives = 3;
 
     
 	// Use this for initialization

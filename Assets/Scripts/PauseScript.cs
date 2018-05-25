@@ -18,7 +18,7 @@ public class PauseScript : MonoBehaviour {
 
     void Update () {
 
-        if (GameOver)
+        if (MovementScript.lives == 0)
         {
             EndGame();
         }

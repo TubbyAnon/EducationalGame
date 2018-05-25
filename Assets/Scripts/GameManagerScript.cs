@@ -23,17 +23,10 @@ public class GameManagerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        ScoreTxt.text = score.ToString();
-        LivesTxt.text = lives.ToString();
-       //s QuestionTxt.text = "0000000000";
+        ScoreTxt.text = MeteorScript.score.ToString();
+        LivesTxt.text = MovementScript.lives.ToString();
+        QuestionTxt.text = QuestionAnswer.question;
 
     }
-    public void removeLive()
-    {
-        lives--;
-    }
-    public void addScore() // for now only 100
-    {
-        score += 100;
-    }
+   
 }

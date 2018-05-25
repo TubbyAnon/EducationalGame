@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class QuestionAnswer {
-    private string question;
+    public static string question;
     private string answer;
 
     public QuestionAnswer(string q, string a)

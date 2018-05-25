@@ -7,7 +7,7 @@ public class MeteorScript : MonoBehaviour
 {
     public float speed;
     public Text Score;
-    int score;
+    public static int score;
     string answer = "";
     // Use this for initialization
     void Start()
@@ -55,6 +55,11 @@ public class MeteorScript : MonoBehaviour
             {
                 score += 100;
                 GameManagerScript.qh.loadQuestion();
+                Debug.Log("Correct");
+            }
+            else
+            {
+                MovementScript.lives--;
             }
             Destroy(collision.gameObject);
             Destroy(gameObject);
