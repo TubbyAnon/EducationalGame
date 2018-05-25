@@ -8,6 +8,7 @@ public class GameManagerScript : MonoBehaviour {
     public Text ScoreTxt;
     public Text LivesTxt;
     public Text QuestionTxt;
+    public Text HighScore;
     public static QuestionHandler qh;
     //public Canvas Pause;
     //public Canvas GameOver;
@@ -19,6 +20,7 @@ public class GameManagerScript : MonoBehaviour {
 	void Start () {
         qh = new QuestionHandler();
         qh.load("addition");
+        HighScore.text = PlayerPrefs.GetInt("HighScore").ToString();
     }
 	
 	// Update is called once per frame

@@ -3775,6 +3775,7 @@ MonoBehaviour:
   ScoreTxt: {fileID: 167096356}
   LivesTxt: {fileID: 1191633133}
   QuestionTxt: {fileID: 1669972810}
+  HighScore: {fileID: 0}
 --- !u!4 &1099774365
 Transform:
   m_ObjectHideFlags: 0

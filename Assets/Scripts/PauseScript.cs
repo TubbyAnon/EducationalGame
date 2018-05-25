@@ -8,6 +8,7 @@ public class PauseScript : MonoBehaviour {
 
     public static bool IsPaused = false;
     public static bool GameOver = false; //to be used from outside. when true the game is over.
+    public static bool FirstTime = true;
 
     public GameObject PauseMenu;
     public GameObject SettingsMenu;
@@ -16,8 +17,12 @@ public class PauseScript : MonoBehaviour {
 
     private void Start()
     {
-        IntroMenu.SetActive(true);
-        Pause();
+        
+        if (FirstTime == true)
+        {
+            Intro(true);
+        }
+        
     }
 
 
@@ -27,6 +32,8 @@ public class PauseScript : MonoBehaviour {
         {
             EndGame();
         }
+
+        
 
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -82,10 +89,13 @@ public class PauseScript : MonoBehaviour {
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
         GameOverScreen.SetActive(false);
         Time.timeScale = 1f;
         GameOver = false;
+        IntroMenu.SetActive(false);
+        MeteorScript.score = 0;
+        MovementScript.lives = 0;
 
     }
 
@@ -96,7 +106,25 @@ public class PauseScript : MonoBehaviour {
         Resume();
     }
 
+    public void Intro(bool op)
+    {
+        if (op)
+        {
+            IntroMenu.SetActive(true);
+            Time.timeScale = 0f;
+            FirstTime = false;
+        }
+        else
+        {
+            IntroMenu.SetActive(false);
+            Time.timeScale = 1f;
+            FirstTime = false;
 
+        }
+        
+
+
+    }
 
 
 
