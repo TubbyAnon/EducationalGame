@@ -100,6 +100,7 @@ public class PauseScript : MonoBehaviour {
         GameOver = false;
         IntroMenu.SetActive(false);
         MeteorScript.score = 0;
+        MeteorScript.speed = 2f;
         MovementScript.lives = 3;
         written = false;
         Menu();

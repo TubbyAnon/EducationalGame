@@ -45,12 +45,12 @@ public class MeteorScript : MonoBehaviour
                 if (score > 500)
                 {
                     GameManagerScript.qh.loadQuestionSet(2);
-                    speed = 4f;
+                    speed = 3f;
                 }
                 else if (score > 200)
                 {
                     GameManagerScript.qh.loadQuestionSet(2);
-                    speed = 3f;
+                    speed = 2f;
                 }
                 GameManagerScript.qh.loadQuestion();
             }
