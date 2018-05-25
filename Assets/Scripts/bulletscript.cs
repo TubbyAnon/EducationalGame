@@ -10,6 +10,7 @@ public class bulletscript : MonoBehaviour {
 	void Start () {
 
         speed = 8f;
+        FindObjectOfType<AudioManagerScript>().Play("LaserShoot");
 	}
 	
 	// Update is called once per frame

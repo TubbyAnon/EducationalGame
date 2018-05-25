@@ -12,9 +12,14 @@ public class PauseScript : MonoBehaviour {
     public GameObject PauseMenu;
     public GameObject SettingsMenu;
     public GameObject GameOverScreen;
-    
-    
-   
+    public GameObject IntroMenu;
+
+    private void Start()
+    {
+        IntroMenu.SetActive(true);
+        Pause();
+    }
+
 
     void Update () {
 
@@ -77,13 +82,19 @@ public class PauseScript : MonoBehaviour {
 
     public void Restart()
     {
-        SceneManager.LoadScene("ui");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         GameOverScreen.SetActive(false);
         Time.timeScale = 1f;
         GameOver = false;
 
     }
 
+    public void DisableIntro()
+    {
+
+        IntroMenu.SetActive(false);
+        Resume();
+    }
 
 
 

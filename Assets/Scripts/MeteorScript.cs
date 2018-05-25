@@ -42,10 +42,14 @@ public class MeteorScript : MonoBehaviour
             {
                 score += 100;
                 GameManagerScript.qh.loadQuestion();
+                FindObjectOfType<AudioManagerScript>().Play("PointsEarned");
+
             }
             else
             {
                 MovementScript.lives--;
+                FindObjectOfType<AudioManagerScript>().Play("LifeLost");
+
             }
             Destroy(collision.gameObject);
             Destroy(gameObject);
